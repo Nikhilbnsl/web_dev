@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Temperature Converter</title>
+    <style>
+        body{
+            padding: 15%;
+            background-color: rgb(220, 160, 20);
+        }
+        
+         #full{
+            text-align: center;
+            padding-bottom: 50px;
+            border: 2px solid red;
+            background-color: aqua;
+        }
+         #area{
+            text-align: center;
+            margin: 5px;
+            padding: 30px;
+        }
+        .box{
+            background-color: orange;
+        }
+        
+
+    </style>
+</head>
+<body>
+    <div id="full">
+        <label for="temperature">Temperature Converter</label><br>
+        <div id="area">
+            <input type="number" placeholder="celcius" id="celcius" class="box">
+            <input type="number" placeholder="fahrenheit" id="fahrenheit" class="box">
+        </div>
+        <input type="submit" id="Submit" onclick="converter()"> 
+
+    </div>
+   <script>
+    alert("Nikhil Bainsla welcomes you to the temperature converter, please press ok to proceed");
+    let c = document.getElementById("celcius");
+    let f = document.getElementById("fahrenheit");
+    c.addEventListener("input", function cconverter(){
+        let a = c.value;
+        let b = ((9/5)*a) + 32 ;
+        f.value = b;
+    });
+
+    f.addEventListener("input", function fconverter(){
+        let j = f.value;
+        let k = ((j - 32)*5)/9;
+        c.value = k;
+    });
+
+    with submit button
+    function converter(){
+        if(c.value){
+            let a = c.value;
+            let b = ((9/5)*a) + 32 ;
+            f.value = b;
+            }
+        
+        else if(f.value){
+            let j = f.value;
+            let k = ((j - 32)*5)/9;
+            c.value = k;
+        }
+
+        else{
+            alert("please enter a value!")
+        }
+        
+    }
+
+
+   </script>
+</body>
+</html>

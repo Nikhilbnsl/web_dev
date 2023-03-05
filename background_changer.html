@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #heading {
+            font-size: xx-large;
+            font-weight: bold;
+            float: left;
+        }
+
+        #cont {
+            margin-right: 10px;
+            float: right;
+        }
+
+        .box {
+            border: 2px solid black;
+            height: 20px;
+            width: 20px;
+            margin: 15px;
+            display: inline-block;
+            border-radius: 50%;
+        }
+
+        #y {
+            background-color: yellow;
+
+        }
+
+        #g {
+            background-color: green;
+
+        }
+
+        #r {
+            background-color: red;
+
+        }
+
+        img {
+            width: 50%;
+            height: auto;
+            margin: 0 auto
+        }
+    </style>
+</head>
+
+<body>
+    <div id="heading">Background Changer</div>
+    <span id="cont">
+        <span id="y" class="box" onclick="ycolor()"></span>
+        <span id="g" class="box" onclick="gcolor()"></span>
+        <span id="r" class="box" onclick="rcolor()"></span>
+    </span>
+    <br> <br>
+    <img src="nn1 (1).png" alt="this is an image">
+    <div id="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate, voluptates vitae saepe nihil
+        placeat iste possimus aliquam eaque ipsam magnam! Qui at perferendis minus ipsum optio quam eaque quos
+        voluptates rerum voluptatum itaque aliquam blanditiis sunt non quas repellendus quod sed sequi doloribus, id
+        repellat asperiores. Animi quaerat ea nemo! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis
+        consectetur temporibus deserunt ad voluptatem nam eaque id nemo autem necessitatibus esse aperiam doloribus
+        saepe error sint odit nobis, voluptas enim.</div>
+    <script>
+        function ycolor() {
+            document.body.style.backgroundColor = "yellow";
+
+        }
+
+        function gcolor() {
+            document.body.style.backgroundColor = "green";
+
+        }
+
+        function rcolor() {
+            document.body.style.backgroundColor = "red";
+
+        }
+    </script>
+</body>
+
+</html>

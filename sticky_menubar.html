@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>sticky Menubar</title>
+    <style>
+        body{
+            margin: 0%;
+        }
+        #logo {
+            width: 10%;
+            height: auto;
+            margin-left: 45%;
+        }
+        #cont {
+            padding: 2px;
+            text-align: center;
+            background-color: cadetblue;
+        }
+        #cont li{
+            display: inline-block;
+            padding: 5px;
+            color: white;
+            font-weight: bold;
+        }
+        h1 {
+            text-align: center;
+            margin-top: 70px;
+        }
+        #image {
+            width: 70%;
+            height: auto;
+            margin-left: 18%;
+        }
+        .sticky{
+            position: fixed;
+            top: 0%;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <div>
+    <img src="naturelogo.png" alt="logo" id="logo"></div>
+    <nav id="cont">
+            <li>Home</li>
+            <li>About Us</li>
+            <li>Our Team</li>
+            <li>Client</li>
+            <li>Contact Us</li>
+    </nav>
+    <div><h1>About Us</h1></div>
+    <img src="aboutus.png" alt="image" id="image"><br>
+    <p>
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Et quas natus, quis rem tempore repudiandae sequi laborum
+    nostrum eveniet. Voluptate soluta commodi necessitatibus quisquam? Eum doloremque rerum sapiente laboriosam
+    architecto dignissimos magni perferendis, tempora eaque blanditiis assumenda laudantium placeat esse eius
+    praesentium nemo mollitia commodi dolorum nulla quae quaerat? <br>
+    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aut sunt quis dolores eum veritatis voluptates explicabo
+    sint doloremque. Fugiat corporis veniam non magnam repellendus asperiores, accusamus, doloribus corrupti quibusdam
+    inventore sequi nesciunt nihil itaque minus, ipsam ipsum dignissimos quasi? Rem maiores suscipit ratione aspernatur
+    officiis, nesciunt molestiae, maxime laborum cum sunt quo numquam dolor earum accusantium repellat laboriosam quas
+    eligendi! <br>
+    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Commodi est dolor maxime? Natus mollitia, aspernatur id
+    dolorem porro sint possimus nemo odio minima quibusdam architecto quaerat reiciendis dolore rerum illum laboriosam
+    sed omnis, odit ad obcaecati magnam. Facilis laborum et velit similique exercitationem numquam quasi cum veniam
+    pariatur, sunt quidem perferendis repellendus praesentium autem ratione veritatis ad temporibus labore laboriosam.
+    Dicta dolore aperiam explicabo nihil amet ex unde, cupiditate, iste repudiandae, facere corporis illum distinctio
+    voluptatem provident deserunt voluptas temporibus ut dolorum est minima rem. Omnis, dolorum quibusdam laboriosam
+    similique voluptatem consequatur accusantium! Fugit cupiditate, explicabo animi corporis non nam! <br>
+    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolorum sit amet maxime molestias consequuntur nobis autem
+    excepturi nisi incidunt sunt enim eligendi obcaecati libero doloremque, cumque, provident at temporibus placeat.
+    Accusamus rem quasi ducimus aut officia, deserunt eos aliquam aliquid sed soluta libero provident voluptatum minima,
+    obcaecati voluptatem delectus quo est maxime assumenda incidunt. Alias minima distinctio sequi asperiores molestias
+    atque enim consequuntur et id, repellat voluptates excepturi repellendus tenetur, reprehenderit sapiente dolor
+    obcaecati debitis optio? Culpa quidem atque ex dolorem? Soluta ducimus fugiat quam sequi voluptate error dolorum at
+    eum accusamus perferendis explicabo dicta aliquid sit optio, possimus, adipisci similique ullam ex aut ut quae enim
+    cum voluptatem sunt! Ducimus accusamus maiores cumque, earum iure culpa tenetur. Ducimus aspernatur aut fuga
+    cupiditate sint praesentium explicabo saepe quod tempore laborum harum beatae, non similique quibusdam, voluptates
+    vero expedita architecto, repudiandae cumque nemo labore reiciendis! Delectus iusto velit porro nesciunt architecto?</p>
+    <script>
+        window.addEventListener("scroll", function(){
+            let navbar=document.getElementById('cont');
+            if(window.pageYOffset >= 82){
+                navbar.classList.add('sticky');
+            }
+            else{
+                navbar.classList.remove('sticky');
+            }
+        });
+    </script>
+</body>
+</html>

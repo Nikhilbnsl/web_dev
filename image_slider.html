@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Slider</title>
+    <style>
+        body{
+            margin: 0px;
+        }
+        .container{
+            position: relative;
+            width: 100%;
+            /* float: left; */
+            text-align: center;
+            margin-top: 50px;
+        }
+
+        
+        img{
+            margin-top: 0%;
+            width: 100%;
+            height: auto;
+            margin: 0px;
+        }
+        p{
+            text-align: center;
+            margin-top: 0px;
+            border: 1px solid;
+            width: 100%;
+            
+        }
+        #prev{
+            position: absolute;
+            top: 40%;
+            left: 10px;
+            color: black;
+            font-size: 16px;
+            padding: 10px 25px;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+            text-align: center;
+            border-radius: 50%;
+        }
+
+        #next{
+            position: absolute;
+            top: 40%;
+            right: 10px;
+            color: black;
+            font-size: 16px;
+            padding: 10px 25px;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+            text-align: center;
+            border-radius: 50%;
+        }
+        p{
+            position: absolute;
+            top: 97.5%;
+            background-color: rgba(0, 0, 0, 0.683);
+            color: white;
+            border: none;
+        }
+        .pic{
+            display: none;
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="container">
+        <button class="btn" id="prev" onclick="controller(-1)"> prev </button>
+        <button class="btn" id="next" onclick="controller(1)"> next </button>
+        <div id="slide">
+        <img src="nn1 (1).png" alt="" id="first" class="pic">
+        <img src="OIP (1).jpg" alt="" id="second" class="pic">
+        <img src="OIP (2).jpg" alt="" id="third" class="pic">
+        <img src="OIP (3).jpg" alt="" id="fourth" class="pic">
+        </div>
+    <script>
+        let flag= 0;
+        function controller(x){
+            flag = flag+x;
+            slideshow(flag);
+        };
+        //calling of slideshow
+        slideshow(flag);
+        function slideshow(num){
+            let pics = document.getElementsByClassName("pic");
+            if(num == pics.length){
+                flag=0;
+                num=0;
+            }
+            if(num < 0){
+                flag=pics.length -1;
+                num=pics.length-1;
+            }
+
+            for(let y of pics){
+                y.style.display="none";
+            }
+            pics[num].style.display = "block";
+            
+            
+        };
+        
+
+    </script>
+    </div>
+</body>
+</html>
